@@ -1,27 +1,38 @@
-import HomePage from './pages/home.vue';
+import HomePage     from './pages/bro_main.vue';
+import ProfilePage  from './pages/bro_profile.vue';
+import BasketPage   from './pages/bro_basket.vue';
+import WantPage     from './pages/bro_want.vue';
+import NotFoundPage from './pages/not-found.vue';
+
 import AboutPage from './pages/about.vue';
 import FormPage from './pages/form.vue';
 import DynamicRoutePage from './pages/dynamic-route.vue';
-import NotFoundPage from './pages/not-found.vue';
 
-import PanelLeftPage from './pages/panel-left.vue';
-import PanelRightPage from './pages/panel-right.vue';
 
 export default [
   {
     path: '/',
+    tabId: 'homepage',
     component: HomePage,
   },
   {
-    path: '/panel-left/',
-    component: PanelLeftPage,
+    path: '/profile/',
+    tabId: 'profilepage',
+    component: ProfilePage,
   },
   {
-    path: '/panel-right/',
-    component: PanelRightPage,
+    path: '/basket/',
+    tabId: 'basketpage',
+    component: BasketPage,
+  },
+  {
+    path: '/want/',
+    tabId: 'wantpage',
+    component: WantPage,
   },
   {
     path: '/about/',
+    tabId: 'aboutpage',
     component: AboutPage,
   },
   {

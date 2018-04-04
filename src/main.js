@@ -29,11 +29,14 @@ new Vue({
   template: '<app/>',
   // Init Framework7 by passing parameters here
   framework7: {
-    id: 'io.framework7.testapp', // App bundle ID
-    name: 'Framework7', // App name
+    id: 'io.freshbroccoli', // App bundle ID
+    name: 'Freshbroccoli', // App name
     theme: 'auto', // Automatic theme detection
     // App routes
     routes: Routes,
+    toolbar: {
+      hideOnPageScroll: true,
+    },
   },
   // Register App Component
   components: {
