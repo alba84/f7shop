@@ -1,4 +1,8 @@
-/* Your app styles here */
-.statusbar {
-    background: white;
-  }
+.md .toolbar a.link {
+  line-height: normal;
+}
+
+.md .tabbar a.link, .md .tabbar-labels a.link, .md .tabbar a.tab-link, .md .tabbar-labels a.tab-link {
+  font-size: 14px;
+  text-transform: none;
+}

@@ -35,7 +35,7 @@ new Vue({
     // App routes
     routes: Routes,
     toolbar: {
-      hideOnPageScroll: true,
+      hideOnPageScroll: false,
     },
   },
   // Register App Component

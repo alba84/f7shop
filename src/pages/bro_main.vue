@@ -12,7 +12,7 @@
 
     <f7-block strong>
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-      <f7-icon icon="icon-home"></f7-icon>
+      <f7-icon icon="home"></f7-icon>
     </f7-block>
     <f7-block-title>Navigation</f7-block-title>
     <f7-list>

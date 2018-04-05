@@ -18,12 +18,12 @@
     <!-- Main View -->
     <f7-view id="main-view" url="/" main>
         <!-- Tabs.vue -->
-        <f7-toolbar bottom-md labels>
-            <f7-link icon="gear" text="Профиль"     route-tab-link="#profilepage"   href="/profile/"></f7-link>
-            <f7-link text="Главная"     route-tab-link="#homepage"      href="/"><f7-icon icon="icon-home"></f7-icon></f7-link>
-            <f7-link icon="icon-2" text="Поиск"     popup-open="#popup"></f7-link>
-            <f7-link icon="icon-2" text="Корзина"   route-tab-link="#basketpage"    href='/basket/'></f7-link>
-            <f7-link icon="icon-2" text="Хочу"      route-tab-link="#wantpage"      href='/want/'></f7-link>
+        <f7-toolbar tabbar bottom-md labels>
+            <f7-link icon-f7="person"   text="Профиль"      route-tab-link="#profilepage"   href="/profile/"></f7-link>
+            <f7-link icon-f7="home"     text="Главная"      route-tab-link="#homepage"      href="/"></f7-link>
+            <f7-link icon-f7="search"   text="Поиск"        popup-open="#popup"></f7-link>
+            <f7-link icon-f7="bag"      text="Корзина"      route-tab-link="#basketpage"    href='/basket/'></f7-link>
+            <f7-link icon-f7="bolt"     text="Хочу"         route-tab-link="#wantpage"      href='/want/'></f7-link>
         </f7-toolbar>
 
         <f7-tabs>
@@ -40,7 +40,7 @@
         <f7-page>
           <f7-navbar title="Popup">
             <f7-nav-right>
-              <f7-link popup-close>Close</f7-link>
+              <f7-link popup-close icon-f7="close"></f7-link>
             </f7-nav-right>
           </f7-navbar>
           <f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam. Omnis iusto nemo quos ullam obcaecati, quod.</f7-block>

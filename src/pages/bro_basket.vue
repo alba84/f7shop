@@ -6,7 +6,7 @@
         <p>Тут корзина. <f7-link back>Назад</f7-link></p>
 
         <!-- Default back icon -->
-        <f7-icon material="geer"></f7-icon>        
+        <f7-icon f7="gear"></f7-icon>        
 
         <f7-icon f7="home"></f7-icon>
         
