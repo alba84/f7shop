@@ -9,6 +9,10 @@ import Framework7Vue from 'framework7-vue/dist/framework7-vue.esm.bundle.js';
 
 // Import F7 Styles
 import Framework7Styles from 'framework7/dist/css/framework7.css';
+import Framework7MDStyles from 'framework7/dist/css/framework7.md.min.css';
+
+//<link rel="stylesheet" href="path/to/framework7.material.min.css">
+//<link rel="stylesheet" href="path/to/framework7.material.colors.min.css">
 
 // Import Icons and App Custom Styles
 import IconsStyles from './css/icons.css';
@@ -37,6 +41,14 @@ new Vue({
     toolbar: {
       hideOnPageScroll: false,
     },
+    material:true,
+    pushState: true,
+    /*preroute: function (view, options) {
+      if (!userLoggedIn()) {
+          alert('Hi!');// view.router.loadPage('auth.html'); //load another page with auth form
+          return false; //required to prevent default router action
+      }
+    }*/
   },
   // Register App Component
   components: {

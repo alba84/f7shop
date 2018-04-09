@@ -10,7 +10,11 @@
       </f7-nav-right -->
     </f7-navbar>
 
-    <f7-block strong>
+    <!-- f7-preloader color="green"></f7-preloader -->
+
+    <bro-good-list></bro-good-list>
+
+    <!-- f7-block strong>
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
       <f7-icon icon="home"></f7-icon>
     </f7-block>
@@ -37,10 +41,16 @@
     <f7-list>
       <f7-list-item link="/dynamic-route/blog/45/post/125/?foo=bar#about" title="Dynamic Route"></f7-list-item>
       <f7-list-item link="/load-something-that-doesnt-exist/" title="Default Route (404)"></f7-list-item>
-    </f7-list>
+    </f7-list -->
 
   </f7-page>
 </template>
 <script>
-export default {}
+import broGoodList from '../components/bro_good_list';
+
+export default {
+    components: {
+        'bro-good-list': broGoodList
+    }
+}
 </script>
