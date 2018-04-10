@@ -53,6 +53,9 @@
 }
 </style>
 <script>
+
+import imageIntersection from '../imageobserver.js';
+
 export default {
     props: {initItem: Object},
     data: function(){
@@ -64,7 +67,21 @@ export default {
         bgpicture: function(){
             return 'background-image: url('+this.item.pre_picture+');'
         }
+    },
+    mounted: function () {
+        var self = this;
+
+        this.$nextTick(function () {
+            var elements = document.querySelectorAll("#item-" + this.item.id + " img.lazy");
+
+            elements.forEach(function (image) {
+                imageIntersection.watch(image);
+                //console.log(imageIntersection.count);
+            });
+            
+        })
     }
+    
 
 };
 </script>
