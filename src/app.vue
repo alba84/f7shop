@@ -18,7 +18,7 @@
     <!-- Main View -->
     <f7-view id="main-view" url="/" main>
         <!-- Tabs.vue -->
-        <f7-toolbar tabbar bottom-md labels>
+        <f7-toolbar tabbar bottom-md labels  class="bg-color-white">
             <f7-link icon-f7="person"   text="Профиль"      route-tab-link="#profilepage"   href="/profile/"></f7-link>
             <f7-link icon-f7="home"     text="Главная"      route-tab-link="#homepage"      href="/"></f7-link>
             <f7-link icon-f7="search"   text="Поиск"        popup-open="#popup"></f7-link>
@@ -77,5 +77,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+    created: function () {
+        this.$store.dispatch('init')
+    }
+}
 </script>

@@ -1,48 +1,60 @@
-// Import Vue
+// Импорт Vue
 import Vue from 'vue';
 
-// Import F7
+// Импорт Vuex
+import Vuex from 'vuex';
+
+// Импорт F7
 import Framework7 from 'framework7/dist/framework7.esm.bundle.js';
 
-// Import F7 Vue Plugin
+// Импорт плагинов F7 Vue
 import Framework7Vue from 'framework7-vue/dist/framework7-vue.esm.bundle.js';
 
-// Import F7 Styles
+// Импорт стилей F7 
 import Framework7Styles from 'framework7/dist/css/framework7.css';
+
+// Импорт стилей F7 MD 
 import Framework7MDStyles from 'framework7/dist/css/framework7.md.min.css';
 
-//<link rel="stylesheet" href="path/to/framework7.material.min.css">
-//<link rel="stylesheet" href="path/to/framework7.material.colors.min.css">
-
-// Import Icons and App Custom Styles
+// Импорт стилей иконок
 import IconsStyles from './css/icons.css';
+
+// Импорт кастомных стилей приложения
 import AppStyles from './css/app.css';
 
-// Import Routes
+// Импорт роутов
 import Routes from './routes.js'
 
-// Import App Component
+// Импорт хранилища
+import Store from './store.js'
+
+// Импорт приложения
 import App from './app';
 
-// Init F7 Vue Plugin
-Vue.use(Framework7Vue, Framework7)
+// Инициализация Vue
+Vue.use(Vuex);
 
-// Init App
+Vue.use(Framework7Vue, Framework7);
+
+// Создание хранилища
+const store = new Vuex.Store(Store)
+
+// Инициализация хранилища
 new Vue({
   el: '#app',
+  store,
   template: '<app/>',
   // Init Framework7 by passing parameters here
   framework7: {
-    id: 'io.freshbroccoli', // App bundle ID
-    name: 'Freshbroccoli', // App name
-    theme: 'auto', // Automatic theme detection
+    id:     'io.freshbroccoli', // App bundle ID
+    name:   'Freshbroccoli', // App name
+    theme:  'auto', // Automatic theme detection
     // App routes
     routes: Routes,
     toolbar: {
-      hideOnPageScroll: false,
+      hideOnPageScroll: true,
     },
     material:true,
-    pushState: true,
     /*preroute: function (view, options) {
       if (!userLoggedIn()) {
           alert('Hi!');// view.router.loadPage('auth.html'); //load another page with auth form

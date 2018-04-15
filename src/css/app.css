@@ -1,3 +1,202 @@
+.md .color-theme-broccoli a {
+  color: #649203;
+}
+.md .color-theme-broccoli .statusbar {
+  background: #357a38;
+}
+.md .color-theme-broccoli .navbar,
+.md .color-theme-broccoli.navbar {
+  background: #649203;
+}
+.md .color-theme-broccoli .toolbar:not(.messagebar),
+.md .color-theme-broccoli.toolbar:not(.messagebar) {
+  background: #649203;
+}
+.md .color-theme-broccoli .subnavbar,
+.md .color-theme-broccoli.subnavbar {
+  background: #649203;
+}
+.md .color-theme-broccoli .list-button {
+  color: #649203;
+}
+.md .color-theme-broccoli .button,
+.md .color-green .button {
+  color: #649203;
+}
+.md .color-theme-broccoli .button.button-fill,
+.md .color-green .button.button-fill,
+.md .color-theme-broccoli .button.button-fill-md,
+.md .color-green .button.button-fill-md,
+.md .color-theme-broccoli .button.button-active,
+.md .color-green .button.button-active,
+.md .color-theme-broccoli .button.tab-link-active,
+.md .color-green .button.tab-link-active {
+  background-color: #649203;
+  color: #fff;
+}
+.md .color-theme-broccoli .button.button-fill.active-state,
+.md .color-green .button.button-fill.active-state,
+.md .color-theme-broccoli .button.button-fill-md.active-state,
+.md .color-green .button.button-fill-md.active-state,
+.md .color-theme-broccoli .button.button-active.active-state,
+.md .color-green .button.button-active.active-state,
+.md .color-theme-broccoli .button.tab-link-active.active-state,
+.md .color-green .button.tab-link-active.active-state {
+  background: #409343;
+}
+.md .color-theme-broccoli .button.button-outline,
+.md .color-green .button.button-outline {
+  border-color: #649203;
+}
+.md .color-theme-broccoli .login-screen-content .list-button {
+  color: #649203;
+}
+.md .color-theme-broccoli .progressbar,
+.md .color-theme-broccoli .progressbar-infinite {
+  background: rgba(76, 175, 80, 0.5);
+}
+.md .color-theme-broccoli .progressbar span {
+  background: #649203;
+}
+.md .color-theme-broccoli .progressbar-infinite:before,
+.md .color-theme-broccoli .progressbar-infinite:after {
+  background: #649203;
+}
+.md .color-theme-broccoli .timeline-item-date,
+.md .color-theme-broccoli .timeline-year-title,
+.md .color-theme-broccoli .timeline-month-title {
+  background: #649203;
+}
+.md .timeline.color-theme-broccoli .timeline-item-date,
+.md .timeline.color-theme-broccoli .timeline-year-title,
+.md .timeline.color-theme-broccoli .timeline-month-title {
+  background: #649203;
+}
+.md .color-theme-broccoli .card-header a.link,
+.md .color-theme-broccoli .card-footer a.link,
+.md .card-header.color-theme-broccoli a.link,
+.md .card-footer.color-theme-broccoli a.link {
+  color: #649203;
+}
+.md .color-theme-broccoli .item-input-focused .item-label,
+.md .color-theme-broccoli .item-input-focused .item-floating-label {
+  color: #649203;
+}
+.md .color-theme-broccoli .item-input-focused .item-input-wrap:after {
+  background: #649203;
+}
+.md .color-theme-broccoli label.item-checkbox input[type="checkbox"]:checked ~ .icon-checkbox,
+.md .color-theme-broccoli label.item-checkbox input[type="checkbox"]:checked ~ * .icon-checkbox,
+.md .color-theme-broccoli .checkbox input[type="checkbox"]:checked ~ i {
+  background-color: #649203;
+  border-color: #649203;
+}
+.md .color-theme-broccoli .checkbox .ripple-wave {
+  background: rgba(76, 175, 80, 0.5);
+}
+.md .color-theme-broccoli .icon-radio:after {
+  background-color: #649203;
+}
+.md .color-theme-broccoli label.item-radio input[type="radio"]:checked ~ .icon-radio,
+.md .color-theme-broccoli label.item-radio input[type="radio"]:checked ~ * .icon-radio,
+.md .color-theme-broccoli .radio input[type="radio"]:checked ~ .icon-radio {
+  border-color: #649203;
+}
+.md .color-theme-broccoli label.item-radio input[type="radio"]:checked ~ .icon-radio:after,
+.md .color-theme-broccoli label.item-radio input[type="radio"]:checked ~ * .icon-radio:after,
+.md .color-theme-broccoli .radio input[type="radio"]:checked ~ .icon-radio:after {
+  background-color: #649203;
+}
+.md .color-theme-broccoli .radio .ripple-wave {
+  background: rgba(76, 175, 80, 0.5);
+}
+.md .color-theme-broccoli .toggle input[type="checkbox"]:checked + .toggle-icon {
+  background: rgba(76, 175, 80, 0.5);
+}
+.md .color-theme-broccoli .toggle input[type="checkbox"]:checked + .toggle-icon:after {
+  background: #649203;
+}
+.md .color-theme-broccoli .range-slider .range-bar-active,
+.md .color-theme-broccoli .range-slider .range-knob,
+.md .color-theme-broccoli .range-slider .range-knob-label,
+.md .color-theme-broccoli .range-slider .range-knob-label:before {
+  background-color: #649203;
+}
+.md .color-theme-broccoli .calendar-header,
+.md .color-green .calendar-header {
+  background: #649203;
+}
+.md .color-theme-broccoli .calendar-day.calendar-day-today span,
+.md .color-green .calendar-day.calendar-day-today span {
+  color: #649203;
+}
+.md .color-theme-broccoli .calendar-day.calendar-day-has-events span:after,
+.md .color-green .calendar-day.calendar-day-has-events span:after {
+  background: #649203;
+}
+.md .color-theme-broccoli .calendar-day.calendar-day-selected span,
+.md .color-green .calendar-day.calendar-day-selected span {
+  background: #649203;
+  color: #fff;
+}
+.md .color-theme-broccoli .calendar-day.calendar-day-selected span:after,
+.md .color-green .calendar-day.calendar-day-selected span:after {
+  background-color: #fff;
+}
+.md .color-theme-broccoli .data-table-header-selected,
+.md .data-table-header-selected.color-green {
+  background: rgba(76, 175, 80, 0.1);
+}
+.md .color-theme-broccoli .data-table-title-selected,
+.md .color-green .data-table-title-selected {
+  color: #649203;
+}
+.md .color-theme-broccoli .fab > a,
+.md .color-theme-broccoli .fab-buttons a,
+.md .color-theme-broccoli.fab > a,
+.md .color-theme-broccoli.fab-buttons a {
+  background: #649203;
+}
+.md .color-theme-broccoli .fab > a.active-state,
+.md .color-theme-broccoli .fab-buttons a.active-state,
+.md .color-theme-broccoli.fab > a.active-state,
+.md .color-theme-broccoli.fab-buttons a.active-state {
+  background: #409343;
+}
+.md .color-theme-broccoli .fab-morph,
+.md .color-theme-broccoli.fab-morph {
+  background: #649203;
+}
+.md .color-theme-broccoli .swiper-button-prev,
+.md .color-theme-broccoli .swiper-container-rtl .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
+}
+.md .color-theme-broccoli .swiper-button-next,
+.md .color-theme-broccoli .swiper-container-rtl .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234caf50'%2F%3E%3C%2Fsvg%3E");
+}
+.md .color-theme-broccoli .swiper-pagination-bullet-active {
+  background: #649203;
+}
+.md .color-theme-broccoli .swiper-pagination-progressbar,
+.md .color-green.swiper-pagination-progressbar,
+.md .color-theme-broccoli.swiper-pagination-progressbar {
+  background: rgba(76, 175, 80, 0.25);
+}
+.md .color-theme-broccoli .swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
+.md .color-green.swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
+.md .color-theme-broccoli.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #649203;
+}
+.md .color-theme-broccoli .photo-browser-page:not(.photo-browser-page-dark) .navbar,
+.md .color-green .photo-browser-page:not(.photo-browser-page-dark) .navbar,
+.md .color-theme-broccoli .photo-browser-page:not(.photo-browser-page-dark) .toolbar,
+.md .color-green .photo-browser-page:not(.photo-browser-page-dark) .toolbar {
+  background-color: rgba(76, 175, 80, 0.95);
+}
+
+/*################################################################*/
+
 .md .toolbar a.link {
   line-height: normal;
 }

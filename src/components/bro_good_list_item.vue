@@ -1,87 +1,115 @@
 <template>
     <li class="card good-list-item" :id="'item-'+item.id">
-        <div class="card-header"> <!--  :style="bgpicture" -->
-            <img class="lazy" :data-src="item.picture" :src="item.pre_picture" :alt="item.name">
-        </div>
+        <div class="card-header lazy lazy-fade-in" :data-background="item.picture"></div>
         <div class="card-content card-content-padding">
-            {{item.name}}
+            <h3>{{item.name}}</h3>
+            <p>{{item.infoves}}</p>
+            <p>Цена за {{item.measure_symbol}} - {{item.price}}</p>
         </div>
         <div class="card-footer">
-            <div class="buttons theme-orange">
-                <a href="#" class="button active">Button 1</a>
-                <a href="#" class="button">Button 2</a>
-            </div>
+            <bro-add-to-basket
+                :good_id="item.id"
+                :available="item.available"
+                :traced="item.traced"
+                :receipt="item.traced_receipt_in"
+                :rest="item.quantity"
+                :price="item.price"
+                :ratio="item.measure_ratio"
+                :measure="item.measure_symbol"
+            ></bro-add-to-basket>
         </div>
     </li>
-
-    <!-- f7-card class="good-list-item">
-        <f7-card-header class="color-white no-border"></f7-card-header>
-        <f7-card-content>{{name}}</f7-card-content>
-        <f7-card-footer></f7-card-footer>
-    </f7-card -->
-
 </template>
 <style>
-/*.good-list-item {
-  
+.good-list ul {
+    display: flex;
+    flex-wrap:wrap;
+    align-content:space-around;
 }
-.good-list-item .card-header {
-    height: 80vw;
+li.good-list-item {
+    flex-grow: 1;
+    flex-shrink: 3;
+    flex-basis: 40%;
+    list-style:none; 
+    width: 40%;
+}
+li.good-list-item .card-header {
+    height: 40vw;
     background-size: cover;
-
-    /*background-image: url(cat.png);* /
     background-position: 50% 50%;
     background-repeat: no-repeat; 
-}*/
-.good-list-item .card-header{ 
-    width: 95vw; 
-    height: 95vw; 
-    overflow:hidden; 
-    float:left;  
-    border: 1px solid #CCC;
-    position: relative;
+    background-color:lightgray;
 }
-.good-list-item .card-header img {
-    width:100%;
-    height:100%; 
-    position: absolute; 
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
-    left: 0; 
-    margin: auto; 
+li.good-list-item .card-footer::before {
+    height:0px;
 }
+li.good-list-item .card-footer  {
+    padding: 0px;
+    min-height: 1px;
+    max-height: 36px;
+    height: 36px;
+}
+
+li.good-list-item .card-footer .segmented {
+
+    border-radius: 3px;
+    width: 100%;
+    border: 1px #649203 solid;
+}
+    li.good-list-item .card-footer .segmented button {
+        width:15%;
+        text-transform:none;
+        min-width: 15px;
+        padding: 0;
+        border: none;
+    }
+
+    li.good-list-item .card-footer .segmented button.buy {
+        width:70%
+    }
+
+    li.good-list-item .card-footer .segmented button.not-available {
+        width:100%
+    }
+li.good-list-item .card-footer .segmented.segmented-raised {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
 </style>
 <script>
-
-import imageIntersection from '../imageobserver.js';
-
+import btnAddToBasket from './bro_btn_add_to_cart.vue';
 export default {
-    props: {initItem: Object},
+    props: {
+        initItem: Object
+    },
     data: function(){
         return {
-            item: this.initItem
+            item: this.initItem,
+            to_basket: this.initItem.measure_ratio,
+            measure: this.initItem.measure_symbol,
         };
-    }, 
+    },
     computed: {
-        bgpicture: function(){
-            return 'background-image: url('+this.item.pre_picture+');'
+        price: function(){
+            return this.item.price * this.to_basket
         }
     },
-    mounted: function () {
-        var self = this;
+    methods: {
+        decrement: function(){
+            console.log('Decrement');
+        },
+        increment: function(){
 
-        this.$nextTick(function () {
-            var elements = document.querySelectorAll("#item-" + this.item.id + " img.lazy");
-
-            elements.forEach(function (image) {
-                imageIntersection.watch(image);
-                //console.log(imageIntersection.count);
-            });
+            if(this.item.traced && !(this.to_basket < this.item.quantity))
+                return;
             
-        })
+            this.to_basket += this.item.measure_ratio;
+        }
+    },
+    components: {
+         'bro-add-to-basket': btnAddToBasket
     }
-    
-
 };
 </script>
