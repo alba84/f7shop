@@ -41,7 +41,6 @@
     <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)" -->
 
   <script>
-    /*
     if ('serviceWorker' in navigator) {
      window.addEventListener('load', function() {  
        navigator.serviceWorker.register('/sw.js').then(
@@ -53,51 +52,7 @@
            console.log('ServiceWorker registration failed: ', err);
          });
      });
-    }*/
-/*
-    var imageObserver = (function(){
-        var observer = {};
-
-        if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) 
-        {
-            observer = new IntersectionObserver(function (entries, observer) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.setAttribute("src", entry.target.getAttribute("data-src"));
-                        entry.target.classList.remove("lazy");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-        }
-
-        return new function(){
-            this.watch = function(el){
-                observer.observe(el);
-            }
-        }
-    }());
-
-    document.addEventListener("DOMContentLoaded", function () {
-        if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) 
-        {
-            var imageObserver = new IntersectionObserver(function (entries, observer) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.setAttribute("src", entry.target.getAttribute("data-src"));
-                        entry.target.classList.remove("lazy");
-                        imageObserver.unobserve(entry.target);
-                    }
-                });
-            });
-
-            elements = document.querySelectorAll("img.lazy");
-            elements.forEach(function (image) {
-                imageObserver.observe(image);
-            });
-        }
-    });*/
-
+    }
     </script>
   <title>Broccoli</title>
   <!-- built style files will be auto injected -->
