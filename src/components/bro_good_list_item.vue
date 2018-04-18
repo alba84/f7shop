@@ -27,6 +27,9 @@
     align-content:space-around;
 }
 li.good-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
     flex-shrink: 3;
     flex-basis: 40%;
@@ -39,6 +42,9 @@ li.good-list-item .card-header {
     background-position: 50% 50%;
     background-repeat: no-repeat; 
     background-color:lightgray;
+}
+li.good-list-item .card-content { 
+    flex-grow: 1;
 }
 li.good-list-item .card-footer::before {
     height:0px;
