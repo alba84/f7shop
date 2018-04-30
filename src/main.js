@@ -46,7 +46,7 @@ new Vue({
   template: '<app/>',
   // Init Framework7 by passing parameters here
   framework7: {
-    id:     'io.freshbroccoli', // App bundle ID
+    id:     'ru.freshbroccoli', // App bundle ID
     name:   'Freshbroccoli', // App name
     theme:  'auto', // Automatic theme detection
     // App routes
@@ -61,6 +61,25 @@ new Vue({
           return false; //required to prevent default router action
       }
     }*/
+    on: {
+        init: function () {
+            console.log('App initialized');
+        },
+        pageInit: function () {
+            console.log('Page initialized');            
+        }
+    },
+    externalLinks: 	'.external',
+  },
+  created: function(){
+    //this.$store.dispatch('init');
+  },
+  methods: {
+    onF7Ready(f7) {
+      // do some f7 related logic
+      //f7.dialog.alert('App initialized');
+      this.$store.dispatch('init');
+    }
   },
   // Register App Component
   components: {

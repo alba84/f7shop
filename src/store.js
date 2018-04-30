@@ -1,19 +1,21 @@
+"use strict";
+
 import Vue from 'vue'
+
+import User from './class/user'
 
 export default {
     state: {
+        user: null,
         order: null
     },
 
     actions: {
         //this.$store.dispatch('init')
         init({commit}){
-           console.log('Store.Init'); 
-            /*OrderStatusCollection.load(this, function(order_statuses){
-
-                commit('SET_STATUS_COLLECTION', order_statuses)
-            })*/
+            let user = new User(this);
         },
+
         setCurrentOrder({commit}, order) {
             commit('SET_CURRENT_ORDER', order)
         }

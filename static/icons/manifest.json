@@ -1,10 +1,10 @@
 {
- "name": "Broccoli",
+ "name": "FreshBroccoli",
  "short_name": "Broccoli",
  "lang": "ru-RU",
  "start_url": "/",
  "display": "standalone",
- "theme_color": "#4CAF50",
+ "theme_color": "#6AA600",
  "background_color": "#6AA600",
  "icons": [
   {
