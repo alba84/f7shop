@@ -25,7 +25,7 @@
 <style>
 
 .broccoli .page-content.login-screen-content {
-    background-image: url(../../static/images/bg-login-40.jpg);
+    background-image: url(../../static/img/bg-login-40.jpg);
     background-size: cover;
     color: white;
 }

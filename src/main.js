@@ -23,13 +23,18 @@ import IconsStyles from './css/icons.css';
 import AppStyles from './css/app.css';
 
 // Импорт роутов
-import Routes from './routes.js'
+import Routes from './routes.js';
 
 // Импорт хранилища
-import Store from './store.js'
+import Store from './store.js';
 
 // Импорт приложения
 import App from './app';
+
+import { currency } from './currency';
+
+// Фильтр для форматирования цен
+Vue.filter('currency', currency);
 
 // Инициализация Vue
 Vue.use(Vuex);
