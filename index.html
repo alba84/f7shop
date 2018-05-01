@@ -11,59 +11,56 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="theme-color" content="#7a9a01">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#7a9a01">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="static/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="static/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="static/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="static/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="static/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="static/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="static/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="static/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="static/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="static/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="static/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="static/icons/favicon-16x16.png">
-  <link rel="manifest" href="static/icons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="static/icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
+    <link rel="manifest" href="/static/icons/site.webmanifest">
+    <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#7a9a01">
+    <link rel="shortcut icon" href="/static/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Broccoli">
+    <meta name="application-name" content="Broccoli">
+    <meta name="msapplication-TileColor" content="#7a9a01">
+    <meta name="msapplication-config" content="/static/icons/browserconfig.xml">
 
     <!-- link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
     <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)" -->
 
-  <script>
-    /*if ('serviceWorker' in navigator) {
-     window.addEventListener('load', function() {  
-       navigator.serviceWorker.register('/sw.js').then(
-         function(registration) {
-           // Registration was successful
-           console.log('ServiceWorker registration successful with scope: ', registration.scope); },
-         function(err) {
-           // registration failed :(
-           console.log('ServiceWorker registration failed: ', err);
-         });
-     });
-    }*/
-    </script>
   <title>Broccoli</title>
   <!-- built style files will be auto injected -->
 </head>
 <body class="color-theme-broccoli">
-  <div id="app"></div>
+  <div id="app">Загрузка...</div>
 
   <!-- Cordova -->
   <!--
   <script src="cordova.js"></script>
   -->
   <!-- built script files will be auto injected -->
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        }).catch(function(err) {
+          console.log(err)
+        });
+      });
+    } else {
+      console.log('service worker is not supported');
+    }
+  </script>
 </body>
 </html>
