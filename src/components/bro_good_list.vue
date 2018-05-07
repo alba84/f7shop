@@ -6,41 +6,28 @@
     </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import broGoodListItem from './bro_good_list_item';
 export default {
     components: {
         'bro-good-list-item': broGoodListItem
     },
-    data: function(){
-        return {
-            items: [],
-            offset: 0,
-            limit: 30
-        }
+    computed: mapGetters({
+        items: 'hit'
+    }),
+    created () {
+        this.$store.dispatch('getHit');
     },
-    methods: {
-        getGoodList: function(){
-            var self = this;
-            this.$request.json('/api/pwa/goods', { limit:this.limit, offset:this.offset }, function (data) {
-                self.items = data;
-            }, function(data){
-                console.log('error', data)
-            });
-        }
-    },
-    created: function(){        
-        this.getGoodList();
-    },
-    updated: function () {
+    updated () {
         var self = this;
 
-        this.$nextTick(function () {
+        this.$nextTick(() => {
             var elements = document.querySelectorAll("div.lazy");
 
-            elements.forEach(function (image) {
+            elements.forEach(image => {
                 self.$f7.lazy.create(image); 
             });
         })
-    }
+    },  
 }
 </script>

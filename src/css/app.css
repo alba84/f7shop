@@ -1,3 +1,4 @@
+/* ### md ### */
 .md .color-theme-broccoli a {
   color: #649203;
 }
@@ -194,6 +195,140 @@
 .md .color-green .photo-browser-page:not(.photo-browser-page-dark) .toolbar {
   background-color: rgba(76, 175, 80, 0.95);
 }
+
+/* ### ios ### */
+
+.ios .color-theme-broccoli a {
+    color: #649203;
+  }
+  .ios .color-theme-broccoli .tabbar a.tab-link-active,
+  .ios .color-theme-broccoli .tabbar-labels a.tab-link-active,
+  .ios .color-theme-broccoli.tabbar-labels a.tab-link-active,
+  .ios .color-theme-broccoli.tabbar a.tab-link-active {
+    color: #649203;
+  }
+  .ios .color-theme-broccoli .list-button {
+    color: #649203;
+  }
+  .ios .color-theme-broccoli .button {
+    border-color: #649203;
+    color: #649203;
+  }
+  .ios .color-theme-broccoli .button.active-state {
+    background: rgba(76, 217, 100, 0.15);
+  }
+  .ios .color-theme-broccoli .button.button-active,
+  .ios .color-theme-broccoli .button.tab-link-active,
+  .ios .color-theme-broccoli .button.button-fill,
+  .ios .color-theme-broccoli .button.button-fill-ios {
+    color: #fff;
+  }
+  .ios .color-theme-broccoli .button.button-active,
+  .ios .color-theme-broccoli .button.tab-link-active {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli .button.button-fill,
+  .ios .color-theme-broccoli .button.button-fill-ios {
+    background: #649203;
+    border-color: transparent;
+  }
+  .ios .color-theme-broccoli .button.button-small.button-fill.active-state,
+  .ios .color-theme-broccoli .button.button-small-ios.button-fill.active-state,
+  .ios .color-theme-broccoli .button.button-small.button-fill-ios.active-state,
+  .ios .color-theme-broccoli .button.button-small-ios.button-fill-ios.active-state {
+    color: #649203;
+    border: 2px solid #649203;
+    background-color: transparent;
+  }
+  .ios .color-theme-broccoli .icon-back,
+  .ios .icon-back.color-green,
+  .ios a.link.color-green .icon-back,
+  .ios .color-theme-broccoli .icon-prev,
+  .ios .icon-prev.color-green,
+  .ios a.link.color-green .icon-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23649203'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  }
+  .ios .color-theme-broccoli .icon-forward,
+  .ios .icon-forward.color-green,
+  .ios a.link.color-green .icon-forward,
+  .ios .color-theme-broccoli .icon-next,
+  .ios .icon-next.color-green,
+  .ios a.link.color-green .icon-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M11.51840604%2010.5648622c-.0352203.05148305-.07573462.10050698-.1215468.14631917L2.5584348%2019.5496058c-.5830904.58309038-1.52656832.5849888-2.11643872-.00488163-.5857864-.58578644-.591222-1.53009836-.0048816-2.11643873L7.87507783%209.9903221.4431923%202.5584366C-.1398981%201.9753462-.1417965%201.0318683.448074.4419979c.5857864-.5857865%201.5300983-.591222%202.11643868-.0048816l8.83842442%208.8384244c.3526746.3526746.3939974.89699.11546894%201.2893215z'%20fill%3D'%23649203'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+  }
+  .ios .color-theme-broccoli .progressbar span {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli .progressbar-infinite:before {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli label.item-checkbox input[type="checkbox"]:checked ~ .icon-checkbox,
+  .ios .color-theme-broccoli .checkbox input[type="checkbox"]:checked ~ i {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli label.item-radio input[type="radio"]:checked ~ .icon-radio,
+  .ios .color-theme-broccoli label.item-radio input[type="radio"]:checked ~ * .icon-radio,
+  .ios .color-theme-broccoli .radio input[type="radio"]:checked ~ .icon-radio {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2013%2010'%3E%3Cpolygon%20fill%3D'%23649203'%20points%3D'11.6%2C0%204.4%2C7.2%201.4%2C4.2%200%2C5.6%204.4%2C10%204.4%2C10%204.4%2C10%2013%2C1.4%20'%2F%3E%3C%2Fsvg%3E");
+  }
+  .ios .color-theme-broccoli .radio input[type="radio"]:checked ~ .icon-radio {
+    border-color: #649203;
+  }
+  .ios .color-theme-broccoli .range-slider .range-bar-active {
+    background-color: #649203;
+  }
+  .ios .color-theme-broccoli .calendar-day.calendar-day-selected span,
+  .ios .color-green .calendar-day.calendar-day-selected span {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli .data-table-header-selected,
+  .ios .data-table-header-selected.color-green {
+    background: rgba(76, 217, 100, 0.1);
+  }
+  .ios .color-theme-broccoli .data-table-title-selected,
+  .ios .color-green .data-table-title-selected {
+    color: #649203;
+  }
+  .ios .color-theme-broccoli .fab > a,
+  .ios .color-theme-broccoli .fab-buttons a,
+  .ios .color-theme-broccoli.fab > a,
+  .ios .color-theme-broccoli.fab-buttons a {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli .fab > a.active-state,
+  .ios .color-theme-broccoli .fab-buttons a.active-state,
+  .ios .color-theme-broccoli.fab > a.active-state,
+  .ios .color-theme-broccoli.fab-buttons a.active-state {
+    background: #2cd048;
+  }
+  .ios .color-theme-broccoli .fab-morph,
+  .ios .color-theme-broccoli.fab-morph {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli .searchbar-disable-button {
+    color: #649203;
+  }
+  .ios .color-theme-broccoli .swiper-button-prev,
+  .ios .color-theme-broccoli .swiper-container-rtl .swiper-button-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23649203'%2F%3E%3C%2Fsvg%3E");
+  }
+  .ios .color-theme-broccoli .swiper-button-next,
+  .ios .color-theme-broccoli .swiper-container-rtl .swiper-button-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23649203'%2F%3E%3C%2Fsvg%3E");
+  }
+  .ios .color-theme-broccoli .swiper-pagination-bullet-active {
+    background: #649203;
+  }
+  .ios .color-theme-broccoli .swiper-pagination-progressbar,
+  .ios .color-green.swiper-pagination-progressbar,
+  .ios .color-theme-broccoli.swiper-pagination-progressbar {
+    background: rgba(76, 217, 100, 0.25);
+  }
+  .ios .color-theme-broccoli .swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
+  .ios .color-green.swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
+  .ios .color-theme-broccoli.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #649203;
+  }
 
 /*################################################################*/
 

@@ -1,7 +1,7 @@
 <template>
     <div v-if="available" class="segmented segmented-raised">
         <button class="button decrement" v-on:click.stop="decrement">-</button>
-        <button class="button button-active buy">{{quantity}} {{measure}} {{total_price | currency(0)}}</button>
+        <button class="button button-active buy" v-on:click.stop="addToCard">{{quantity}} {{measure}} {{total_price | currency(0)}}</button>
         <button class="button increment" v-on:click.stop="increment">+</button>
     </div>  
     <div v-else class="segmented segmented-raised">
@@ -42,6 +42,9 @@ export default {
             if(this.traced && !(this.quantity < this.rest))
                 return;
             this.quantity += this.ratio;
+        },
+        addToCard: function(){
+            this.$store.dispatch('getHit');
         }
     }
 };

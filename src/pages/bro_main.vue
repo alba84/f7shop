@@ -27,6 +27,20 @@ export default {
     components: {
         'bro-good-list': broGoodList
     },
+    data: function(){
+        return {
+            allowInfinite: true
+        };
+    },
+    on: {
+        infinite: function() {
+            if (!this.allowInfinite) return;
+            
+             this.allowInfinite = false;
+
+            this.$store.dispatch('getHit', () => { this.allowInfinite = true;});
+        }
+    },
     methods: {
       onSearch: function (query, found) {
         console.log('search', query);

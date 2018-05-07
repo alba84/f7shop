@@ -4,7 +4,7 @@
         <div class="card-content card-content-padding">
             <h3>{{item.name}}</h3>
             <p>{{item.infoves}}</p>
-            <p>Цена за {{item.measure_symbol}} - {{item.price}}</p>
+            <p>Цена за {{item.measure_symbol}} - {{item.price | currency(0)}}</p>
         </div>
         <div class="card-footer">
             <bro-add-to-basket

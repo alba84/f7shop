@@ -15,6 +15,6 @@
     ],
     "theme_color": "#7a9a01",
     "background_color": "#7a9a01",
-    "start_url": "https://repus.website",
+    "start_url": "https://repus.website/index.html",
     "display": "standalone"
 }
